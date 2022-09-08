@@ -1,6 +1,12 @@
 #include "main.h"
 #include <limits.h>
 
+/**
+ * _atoi - convert a string to an integer
+ * @s: the string to convert
+ *
+ * Return: result of the conversion
+ */
 int _atoi(char *s)
 {
 	unsigned int n = 0;
@@ -12,6 +18,8 @@ int _atoi(char *s)
 		if (*s >= '0' && *s <= '9')
 		{
 			flag = 1;
+
+			if (sign > 0)
 			{
 				if (INT_MAX / 10 < (int) n)
 					return (INT_MAX);
